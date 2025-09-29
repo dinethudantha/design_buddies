@@ -1,5 +1,7 @@
 import './App.scss'
 import Home from './assets/Components/Home'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
 
