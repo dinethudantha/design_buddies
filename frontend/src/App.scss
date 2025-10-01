@@ -29,3 +29,16 @@ h4{
     font-size: 1rem;
 }
 
+.btn-primary{
+    
+    background-color: $primary-color !important;
+    color: white !important;
+    border: none !important;
+    width: 100px;
+
+    &:hover{
+        background-color: black !important;
+        color: white !important;
+        border: none !important;
+    }
+}

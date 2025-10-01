@@ -10,39 +10,24 @@ function Navigation() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Brand href="#">Design Buddies</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Form className="d-flex">
+        <Navbar.Collapse className="d-flex" id="navbarScroll">
+          <Form className="d-flex align-items-center flex-grow-1 me-5 border py-2 px-4 rounded-pill">
             <Form.Control
               type="search"
-              placeholder="Search"
-              className="me-2"
+              placeholder="Search for products"
+              className="me-2 border-0 bg-transparent shadow-none"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
-          </Form>
-          <Nav
-            className="ms-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
-          </Nav>
+            <Button
+              className="btn btn-primary rounded-circle h-100 d-flex align-items-center justify-content-center"
+              style={{ width: "35px", aspectRatio: "1/1" }}
+              variant="outline-success"
+            >
+              <i class="bi bi-search"></i>
+            </Button>
+          </Form> 
         </Navbar.Collapse>
       </Container>
     </Navbar>
