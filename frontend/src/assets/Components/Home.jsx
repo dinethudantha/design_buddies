@@ -1,6 +1,7 @@
 import "../css/Style.scss";
 import React from "react";
 import Navigation from "./Common/Navigation";
+import MainSlider from "./Common/MainSlider";
 
 function Home() {
   return (
@@ -14,6 +15,8 @@ function Home() {
         </div>
         <Navigation />
       </header>
+      {/* Slider Here */}
+      <MainSlider />
     </>
   );
 }

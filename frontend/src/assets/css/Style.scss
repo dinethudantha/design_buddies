@@ -4,3 +4,22 @@ $primary-color: #014139;
     height: 50px;
     background-color: $primary-color;
 }
+
+// Main Slider CSS
+
+.MainSlider{
+    height: 600px;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
