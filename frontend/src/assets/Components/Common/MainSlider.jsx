@@ -50,10 +50,46 @@ const MainSlider = () => {
         autoplay={{ delay: 10000 }}
         loop={true}
       >
-        <SwiperSlide style={Slider1BackgroundStyle}></SwiperSlide>
-        <SwiperSlide style={Slider2BackgroundStyle}></SwiperSlide>
-        <SwiperSlide style={Slider3BackgroundStyle}></SwiperSlide>
-        <SwiperSlide style={Slider4BackgroundStyle}></SwiperSlide>
+        <SwiperSlide style={Slider1BackgroundStyle}>
+          <div className="bg-overlay"></div>
+          <div className="text-center text-white" style={{ zIndex: "1" }}>
+            <h1 className="slider-header">Cooker Hoods</h1>
+            <p style={{ textTransform: "capitalize" }}>
+              Keep your kitchen fresh with our modern cooker hoods
+            </p>
+            <button className="btn btn-primary">SHOP NOW!</button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide style={Slider2BackgroundStyle}>
+          <div className="bg-overlay"></div>
+          <div className="text-center text-white" style={{ zIndex: "1" }}>
+            <h1 className="slider-header">Wall Decor & Panels</h1>
+            <p style={{ textTransform: "capitalize" }}>
+              Transform your kitchen walls with stylish panels and sheets
+            </p>
+            <button className="btn btn-primary">SHOP NOW!</button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide style={Slider3BackgroundStyle}>
+          <div className="bg-overlay"></div>
+          <div className="text-center text-white" style={{ zIndex: "1" }}>
+            <h1 className="slider-header">Pantry Cupboards</h1>
+            <p style={{ textTransform: "capitalize" }}>
+              Elegant storage solutions for your perfect kitchen space
+            </p>
+            <button className="btn btn-primary">SHOP NOW!</button>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide style={Slider4BackgroundStyle}>
+          <div className="bg-overlay"></div>
+          <div className="text-center text-white" style={{ zIndex: "1" }}>
+            <h1 className="slider-header">Sinks & Faucets</h1>
+            <p style={{ textTransform: "capitalize" }}>
+              Premium sinks and faucets built for modern kitchens
+            </p>
+            <button className="btn btn-primary">SHOP NOW!</button>
+          </div>
+        </SwiperSlide>
         ...
       </Swiper>
     </div>

@@ -53,60 +53,44 @@ function Navigation() {
         <Container className="justify-content-center">
           <Navbar.Collapse id="navbarScroll" className="justify-content-center">
             <Nav className="text-uppercase" style={{ fontSize: "11px" }}>
-              <Nav.Item  className="px-3 py-2">
+              <Nav.Item className="px-3 py-2">
                 <Nav.Link
                   href="#"
                   onClick={() => setExpanded(false)} // close after click
                 >
-                  Home & Decor
+                  Cooker Hoods
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item  className="px-3 py-2">
+              <Nav.Item className="px-3 py-2">
                 <Nav.Link
                   href="#"
                   onClick={() => setExpanded(false)} // close after click
                 >
-                  Bed & Bathroom
+                  Wall Decor & Panels
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item  className="px-3 py-2">
+              <Nav.Item className="px-3 py-2">
                 <Nav.Link
                   href="#"
                   onClick={() => setExpanded(false)} // close after click
                 >
-                  Kitchen & Storage
+                  Pantry Cupboards
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item  className="px-3 py-2">
+              <Nav.Item className="px-3 py-2">
                 <Nav.Link
                   href="#"
                   onClick={() => setExpanded(false)} // close after click
                 >
-                  Outdoor & Garden
+                  Sinks & Faucets
                 </Nav.Link>
               </Nav.Item>
-              <Nav.Item  className="px-3 py-2">
+              <Nav.Item className="px-3 py-2">
                 <Nav.Link
                   href="#"
                   onClick={() => setExpanded(false)} // close after click
                 >
-                  Hardware & Fittings
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item  className="px-3 py-2">
-                <Nav.Link
-                  href="#"
-                  onClick={() => setExpanded(false)} // close after click
-                >
-                  Electrical
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item  className="px-3 py-2">
-                <Nav.Link
-                  href="#"
-                  onClick={() => setExpanded(false)} // close after click
-                >
-                  Sale
+                  Accessories
                 </Nav.Link>
               </Nav.Item>
             </Nav>
