@@ -2,7 +2,7 @@ import "../css/Style.scss";
 import React from "react";
 import Navigation from "./Common/Navigation";
 import MainSlider from "./Common/MainSlider";
-import Category1 from "./../Img/Category1.jpg";
+import Category1 from "./../Img/Category1.jpeg";
 import WallDecor from "./../Img/WallDecor.jpg";
 import PantryCupboard from "./../Img/PantryCupboard.jpg";
 import Sink from "./../Img/Sink.jpg";
