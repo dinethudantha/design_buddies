@@ -46,3 +46,10 @@ h4{
 .border-right{
     border-right: 1px solid #dee2e6;
 }
+
+:root {
+  --swiper-pagination-color: #014139; /* Active bullet color */
+  --swiper-pagination-bullet-inactive-color: #999999; /* Inactive bullet color */
+  --swiper-pagination-bullet-inactive-opacity: 0.5; /* Inactive bullet opacity */
+  /* Other pagination related variables can also be customized */
+}
