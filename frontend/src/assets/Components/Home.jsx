@@ -86,7 +86,7 @@ function Home() {
         <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
       </div>
       <div className="container pb-4 ">
-        <h2>Best Selling Products</h2>
+        <h2 className="mb-4">Best Selling  Products</h2>
         <ProductSlider />
       </div>
       {/* Popular Items Section End */}

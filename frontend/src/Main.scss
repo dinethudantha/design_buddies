@@ -10,12 +10,15 @@ $primary-color: #014139;
   font-family: $primary-font;
 }
 
+
 :root {
   --swiper-pagination-color: #014139; /* Active bullet color */
   --swiper-pagination-bullet-inactive-color: #999999; /* Inactive bullet color */
   --swiper-pagination-bullet-inactive-opacity: 0.5; /* Inactive bullet opacity */
   /* Other pagination related variables can also be customized */
 }
+
+
 
 // Default Typographies
 
@@ -62,6 +65,19 @@ h1.slider-header {
     color: white !important;
     border: none !important;
   }
+}
+
+.btn-cart {
+  background-color: $primary-color !important;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 0;
+  &:hover{
+    color: white !important;
+    background-color: black !important;
+  }
+
 }
 
 .border-right {
