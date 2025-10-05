@@ -90,7 +90,7 @@ function Navigation() {
                   href="#"
                   onClick={() => setExpanded(false)} // close after click
                 >
-                  Accessories
+                  Kitchen Accessories
                 </Nav.Link>
               </Nav.Item>
             </Nav>

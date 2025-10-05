@@ -23,3 +23,11 @@ $primary-color: #014139;
         height: 100%;
     }
 }
+
+// Category Section
+
+.CategoryBox {
+    &:hover{
+        color: $primary-color;
+    }
+}

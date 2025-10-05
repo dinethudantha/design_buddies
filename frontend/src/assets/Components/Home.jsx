@@ -2,10 +2,11 @@ import "../css/Style.scss";
 import React from "react";
 import Navigation from "./Common/Navigation";
 import MainSlider from "./Common/MainSlider";
-import Category1 from "./../Img/Category1.jpeg";
-import WallDecor from "./../Img/WallDecor.jpg";
-import PantryCupboard from "./../Img/PantryCupboard.jpg";
-import Sink from "./../Img/Sink.jpg";
+import Category1 from "./../Img/Category1.jpg";
+import Category2 from "./../Img/Category2.jpg";
+import Category3 from "./../Img/Category3.jpg";
+import Category4 from "./../Img/Category4.jpg";
+import ProductSlider from "./Common/ProductSlider";
 
 function Home() {
   const CategoryBoxContainerStyle = {
@@ -31,17 +32,17 @@ function Home() {
 
   const CategoryBox2Style = {
     ...CategoryBoxStyle,
-    backgroundImage: `url(${WallDecor})`,
+    backgroundImage: `url(${Category2})`,
   };
 
   const CategoryBox3Style = {
     ...CategoryBoxStyle,
-    backgroundImage: `url(${PantryCupboard})`,
+    backgroundImage: `url(${Category3})`,
   };
 
   const CategoryBox4Style = {
     ...CategoryBoxStyle,
-    backgroundImage: `url(${Sink})`,
+    backgroundImage: `url(${Category4})`,
   };
 
   return (
@@ -58,27 +59,37 @@ function Home() {
       {/* Slider Here */}
       <MainSlider />
       {/* Categories Section */}
-      <div className="container py-5 d-flex align-items-center justify-content-center">
+      <div className="container d-flex align-items-center justify-content-center pt-5 pb-5">
         <div style={CategoryBoxContainerStyle}>
-          <div className="text-center">
+          <div className="text-center CategoryBox">
             <div style={CategoryBox1Style}></div>
             Cooker Hood
           </div>
-          <div className="text-center">
+          <div className="text-center CategoryBox">
             <div style={CategoryBox2Style}></div>
             Wall Decor & Panels
           </div>
-          <div className="text-center">
+          <div className="text-center CategoryBox">
             <div style={CategoryBox3Style}></div>
             Pantry Cupboards
           </div>
-          <div className="text-center">
+          <div className="text-center CategoryBox">
             <div style={CategoryBox4Style}></div>
             Sinks & Faucets
           </div>
         </div>
       </div>
       {/* Categories Section End */}
+      {/* Popular Items Section */}
+      <div className="container section-header text-center pb-5">
+        <h1>Welcome to Design Buddies!</h1>
+        <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
+      </div>
+      <div className="container pb-4 ">
+        <h2>Best Selling Products</h2>
+        <ProductSlider />
+      </div>
+      {/* Popular Items Section End */}
     </>
   );
 }
