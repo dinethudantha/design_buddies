@@ -7,6 +7,9 @@ import Category2 from "./../Img/Category2.jpg";
 import Category3 from "./../Img/Category3.jpg";
 import Category4 from "./../Img/Category4.jpg";
 import ProductSlider from "./Common/ProductSlider";
+import PromotionBanner from "./../Img/PromotionBanner.webp";
+import Footer from "./Common/Footer";
+import Promotion1 from "./../Img/Promotion1.jpg";
 
 function Home() {
   const CategoryBoxContainerStyle = {
@@ -63,7 +66,7 @@ function Home() {
         <div style={CategoryBoxContainerStyle}>
           <div className="text-center CategoryBox">
             <div style={CategoryBox1Style}></div>
-            Cooker Hood
+            Cooker Hoods
           </div>
           <div className="text-center CategoryBox">
             <div style={CategoryBox2Style}></div>
@@ -86,10 +89,50 @@ function Home() {
         <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
       </div>
       <div className="container pb-4 ">
-        <h2 className="mb-4">Best Selling  Products</h2>
+        <h2 className="mb-4">Best Sellers</h2>
         <ProductSlider />
       </div>
       {/* Popular Items Section End */}
+
+      {/* Promotion Section Start */}
+      <section
+        className="banner-section py-5"
+        style={{ backgroundColor: "#f7f8fa" }}
+      >
+        <div className="container">
+          <div className="row align-items-center">
+            {/* Left Text */}
+            <div className="col-md-6 text-md-start text-center mb-4 mb-md-0">
+              <h2 className="fw-bold display-5 mb-2">Your Dream Kitchen</h2>
+              <h3 className="fw-semibold mb-3">Now In Reality</h3>
+              <p className="lead text-danger fw-bold mb-4">
+                Enjoy 20% OFF Today!
+              </p>
+              <a href="#offers" className="btn btn-primary btn-lg">
+                SHOP NOW!
+              </a>
+            </div>
+
+            {/* Right Image */}
+            <div className="col-md-6 text-center">
+              <img
+                src={Promotion1} // your uploaded image
+                alt="Dream Kitchen"
+                className="img-fluid rounded shadow-sm"
+                style={{ maxHeight: "400px", objectFit: "cover" }}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom white row */}
+        <div className="bottom-bar mt-5"></div>
+      </section>
+      <div className="py-4"></div>
+      {/* Promotion Section End */}
+      {/* Footer Start */}
+      <Footer />
+      {/* Footer End */}
     </>
   );
 }

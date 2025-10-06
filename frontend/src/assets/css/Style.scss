@@ -37,12 +37,12 @@ $primary-color: #014139;
 .ProductSlider {
   .swiper {
     .swiper-slide {
-      transition: 0.5s ease !important;
+      transition: 0.2s ease !important;
       cursor: pointer;
 
       .OptionSec {
         display: none !important;
-        transition: 0.5s ease !important;
+        transition: 0.2s ease !important;
       }
 
       &:hover {
@@ -60,3 +60,4 @@ $primary-color: #014139;
     }
   }
 }
+

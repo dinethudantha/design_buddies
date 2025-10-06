@@ -84,6 +84,10 @@ h1.slider-header {
   border-right: 1px solid #dee2e6;
 }
 
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
 .bg-overlay {
   position: absolute;
   background: linear-gradient(
