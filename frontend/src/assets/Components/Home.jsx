@@ -23,7 +23,6 @@ function Home() {
   const CategoryBoxStyle = {
     width: "170px",
     aspectRatio: "1/1",
-    backgroundColor: "red",
     borderRadius: "50%",
     backgroundSize: "cover",
     backgroundPosition: "center",

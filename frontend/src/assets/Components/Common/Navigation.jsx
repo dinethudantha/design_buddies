@@ -1,16 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
+  const [scrollUp, setScrollUp] = useState(true);
+  const [lastScroll, setLastScroll] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll && currentScroll > 100) {
+        // scrolling down
+        setScrollUp(false);
+      } else {
+        // scrolling up
+        setScrollUp(true);
+      }
+      setLastScroll(currentScroll);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScroll]);
   return (
-    <div className="bg-body-tertiary">
+    <div className={`bg-body-tertiary nav-bar ${scrollUp ? "show" : "hide"}`}>
       {/* 🔹 First container (logo, search, cart, toggle) */}
       <Container className="border-bottom py-3 d-flex align-items-center justify-content-between">
         {/* 👇 Toggle button is here (in container 1) */}
@@ -23,7 +41,9 @@ function Navigation() {
           </Navbar.Toggle>
         </Navbar>
 
-        <Navbar.Brand ><Link to="/" >Design Buddies</Link></Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/">Design Buddies</Link>
+        </Navbar.Brand>
         {/* Search Bar */}
         <Form className="d-flex align-items-center flex-grow-1 mx-5 border py-2 px-4 rounded-pill">
           <Form.Control
