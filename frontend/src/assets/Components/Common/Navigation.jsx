@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
@@ -22,7 +23,7 @@ function Navigation() {
           </Navbar.Toggle>
         </Navbar>
 
-        <Navbar.Brand href="#">Design Buddies</Navbar.Brand>
+        <Navbar.Brand ><Link to="/" >Design Buddies</Link></Navbar.Brand>
         {/* Search Bar */}
         <Form className="d-flex align-items-center flex-grow-1 mx-5 border py-2 px-4 rounded-pill">
           <Form.Control

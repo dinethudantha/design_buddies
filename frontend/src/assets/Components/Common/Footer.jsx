@@ -2,6 +2,15 @@ import React from "react";
 import { Form, InputGroup, Button } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faFacebookF,
+  faInstagram,
+  faTiktok,
+  faPinterest,
+  faYoutube,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
+
+import {
   faPhone,
   faEnvelope,
   faClock,
@@ -11,7 +20,7 @@ import {
 function Footer() {
   return (
     <>
-      <div className="bg-primary p-3 w-100 ">
+      <div className="bg-primary p-3 w-100 mt-5">
         <div className="container d-flex align-items-center justify-content-between">
           <span className="text-white text-bold">GET IN TOUCH:</span>
           <div
@@ -51,7 +60,55 @@ function Footer() {
               </Button>
             </InputGroup>
           </div>
-          <div className="social-icons d-flex align-items-center gap-4"></div>
+          <div className="social-icons d-flex align-items-center gap-2">
+            <a
+              href="https://facebook.com"
+              className="social-icon facebook text-white"
+            >
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+            {/* Instagram */}
+            <a
+              href="https://instagram.com/yourpage"
+              className="social-icon instagram text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+
+            {/* TikTok */}
+            <a
+              href="https://tiktok.com/@yourpage"
+              className="social-icon tiktok text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok"
+            >
+              <FontAwesomeIcon icon={faTiktok} />
+            </a>
+
+            {/* Email */}
+            <a
+              href="mailto:info@yourdomain.com"
+              className="social-icon email text-white"
+              aria-label="Email"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
+
+            {/* YouTube */}
+            <a
+              href="https://youtube.com/yourchannel"
+              className="social-icon youtube text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+            >
+              <FontAwesomeIcon icon={faYoutube} />
+            </a>
+          </div>
         </div>
       </div>
       <footer>
@@ -91,7 +148,6 @@ function Footer() {
                       Kitchen Accessories
                     </a>
                   </li>
-                  
                 </ul>
               </div>
 
@@ -141,7 +197,10 @@ function Footer() {
               <div className="col-md-3 mb-4">
                 <h5 className="fw-bold mb-3">ABOUT</h5>
                 <p className="text-muted small">
-                  We’re a kitchen cabinet and Italian Aluminum doors and windows manufacturing company that specializes in custom-built cabinets and Doors and windows for homes and commercial projects.
+                  We’re a kitchen cabinet and Italian Aluminum doors and windows
+                  manufacturing company that specializes in custom-built
+                  cabinets and Doors and windows for homes and commercial
+                  projects.
                 </p>
               </div>
 
@@ -193,7 +252,8 @@ function Footer() {
           style={{ backgroundColor: "#ffffff" }}
           className="text-center text-muted small py-3 border-top"
         >
-          © {new Date().getFullYear()} <a href="#">The Anzwer IT Solutions</a>. All rights reserved.
+          © {new Date().getFullYear()} <a href="#" style={{textDecoration:"underline"}}>The Anzwer IT Solutions</a>.
+          All rights reserved.
         </div>
       </footer>
     </>

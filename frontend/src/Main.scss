@@ -18,7 +18,14 @@ $primary-color: #014139;
   /* Other pagination related variables can also be customized */
 }
 
+html{
+  overflow-y: scroll !important;
+}
 
+a {
+  text-decoration: none;
+  color: #2f3134;
+}
 
 // Default Typographies
 

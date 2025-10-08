@@ -3,13 +3,15 @@ import React from "react";
 import Navigation from "./Common/Navigation";
 import MainSlider from "./Common/MainSlider";
 import Category1 from "./../Img/Category1.jpg";
-import Category2 from "./../Img/Category2.jpg";
-import Category3 from "./../Img/Category3.jpg";
-import Category4 from "./../Img/Category4.jpg";
+import Category2 from "./../Img/2150794171.jpg";
+import Category3 from "./../Img/17748.jpg";
+import Category4 from "./../Img/20011.jpg";
 import ProductSlider from "./Common/ProductSlider";
 import PromotionBanner from "./../Img/PromotionBanner.webp";
 import Footer from "./Common/Footer";
 import Promotion1 from "./../Img/Promotion1.jpg";
+import Blog from "./Common/Blog";
+import ScrollTop from "./Common/ScrollUp";
 
 function Home() {
   const CategoryBoxContainerStyle = {
@@ -61,42 +63,58 @@ function Home() {
       </header>
       {/* Slider Here */}
       <MainSlider />
+      <div className="container section-header text-center mt-5">
+        <h1>Welcome to Design Buddies!</h1>
+        <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
+      </div>
       {/* Categories Section */}
-      <div className="container d-flex align-items-center justify-content-center pt-5 pb-5">
+
+      <div className="container d-flex align-items-center justify-content-center mt-5">
         <div style={CategoryBoxContainerStyle}>
           <div className="text-center CategoryBox">
-            <div style={CategoryBox1Style}></div>
-            Cooker Hoods
+            <a href="#">
+              <div style={CategoryBox1Style}></div>
+              Cooker Hoods
+            </a>
           </div>
           <div className="text-center CategoryBox">
-            <div style={CategoryBox2Style}></div>
-            Wall Decor & Panels
+            <a href="#">
+              <div style={CategoryBox2Style}></div>
+              Wall Decor & Panels
+            </a>
           </div>
           <div className="text-center CategoryBox">
-            <div style={CategoryBox3Style}></div>
-            Pantry Cupboards
+            <a href="#">
+              <div style={CategoryBox3Style}></div>
+              Pantry Cupboards
+            </a>
           </div>
           <div className="text-center CategoryBox">
-            <div style={CategoryBox4Style}></div>
-            Sinks & Faucets
+            <a href="#">
+              <div style={CategoryBox4Style}></div>
+              Sinks & Faucets
+            </a>
           </div>
         </div>
       </div>
       {/* Categories Section End */}
       {/* Popular Items Section */}
-      <div className="container section-header text-center pb-5">
-        <h1>Welcome to Design Buddies!</h1>
-        <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
-      </div>
-      <div className="container pb-4 ">
+
+      {/* <div className="container pb-4 ">
         <h2 className="mb-4">Best Sellers</h2>
-        <ProductSlider />
+        
+      </div> */}
+      <div className="container section-header text-center mt-5">
+        <h1>Best Sellers</h1>
+        <p>Most Loved by Customers — A Must Have In a High Quality Kitchen</p>
       </div>
+      <ProductSlider /> 
+
       {/* Popular Items Section End */}
 
       {/* Promotion Section Start */}
       <section
-        className="banner-section py-5"
+        className="banner-section py-5 mt-5"
         style={{ backgroundColor: "#f7f8fa" }}
       >
         <div className="container">
@@ -130,8 +148,13 @@ function Home() {
       </section>
       <div className="py-4"></div>
       {/* Promotion Section End */}
+      {/* Blog Section Start */}
+      <Blog />
+      {/* Blog Section End */}
       {/* Footer Start */}
       <Footer />
+
+      <ScrollTop />
       {/* Footer End */}
     </>
   );
