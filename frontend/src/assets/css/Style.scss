@@ -20,6 +20,18 @@ $primary-color: #014139;
 .MainSlider {
   height: 600px;
   width: 100%;
+  
+  @media screen and (max-height:1199px) {
+    aspect-ratio: 16/8 !important;
+  }
+
+  @media screen and (max-height:991px) {
+    aspect-ratio: 4/3 !important;
+  }
+
+  @media screen and (max-height:767px) {
+    aspect-ratio: 1/1 !important;
+  }
 }
 
 .swiper {
