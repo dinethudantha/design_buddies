@@ -22,7 +22,7 @@ const categories = [
 
 function Categories() {
   return (
-    <section className="categories-section py-5">
+    <section className="categories-section ">
       <Container>
         <Row className="justify-content-center text-center">
           {categories.map((cat, index) => (

@@ -10,6 +10,7 @@ import Promotion1 from "./../Img/Promotion1.jpg";
 import Blog from "./Common/Blog";
 import ScrollTop from "./Common/ScrollUp";
 import Categories from "./Common/Categories";
+import SectionHeader from "./Common/SectionHeader";
 
 function Home() {
   const CategoryBoxContainerStyle = {
@@ -18,68 +19,30 @@ function Home() {
     width: "auto",
   };
 
-
   return (
     <>
       <header className="shadow">
-        <div className="top-bar w-100 d-flex align-items-center justify-content-center">
-          <span className="text-white text-center">
-            ISLAND WIDE FREE DELIVERY ORDER ABOVE RS.15000/- PLANTS ONLY
-            DELIVERED WITHIN COLOMBO & SUBURB
-          </span>
-        </div>
         <Navigation />
       </header>
       {/* Slider Here */}
+      
       <MainSlider />
-      <div className="container section-header text-center mt-5">
-        <h1>Welcome to Design Buddies!</h1>
-        <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
-      </div>
+
+      <SectionHeader
+        title="Welcome to Design Buddies!"
+        description="Complete Kitchen Solutions — Cooker Hoods, Cabinets & More"
+      />
+
       {/* Categories Section */}
 
       <Categories />
 
-      {/* <div className="container d-flex align-items-center justify-content-center mt-5">
-        <div style={CategoryBoxContainerStyle}>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox1Style}></div>
-              Cooker Hoods
-            </a>
-          </div>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox2Style}></div>
-              Wall Decor & Panels
-            </a>
-          </div>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox3Style}></div>
-              Pantry Cupboards
-            </a>
-          </div>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox4Style}></div>
-              Sinks & Faucets
-            </a>
-          </div>
-        </div>
-      </div> */}
-      {/* Categories Section End */}
-      {/* Popular Items Section */}
+      <SectionHeader
+        title="Best Sellers"
+        description="Most Loved by Customers — A Must Have In a High Quality Kitchen"
+      />
 
-      {/* <div className="container pb-4 ">
-        <h2 className="mb-4">Best Sellers</h2>
-        
-      </div> */}
-      <div className="container section-header text-center mt-5">
-        <h1>Best Sellers</h1>
-        <p>Most Loved by Customers — A Must Have In a High Quality Kitchen</p>
-      </div>
-      <ProductSlider /> 
+      <ProductSlider />
 
       {/* Popular Items Section End */}
 
@@ -117,7 +80,7 @@ function Home() {
         {/* Bottom white row */}
         <div className="bottom-bar mt-5"></div>
       </section>
-      <div className="py-4"></div>
+
       {/* Promotion Section End */}
       {/* Blog Section Start */}
       <Blog />
