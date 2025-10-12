@@ -11,6 +11,7 @@ import Blog from "./Common/Blog";
 import ScrollTop from "./Common/ScrollUp";
 import Categories from "./Common/Categories";
 import SectionHeader from "./Common/SectionHeader";
+import { Link } from "react-router-dom";
 
 function Home() {
   const CategoryBoxContainerStyle = {
@@ -25,7 +26,7 @@ function Home() {
         <Navigation />
       </header>
       {/* Slider Here */}
-      
+
       <MainSlider />
 
       <SectionHeader
@@ -37,14 +38,14 @@ function Home() {
 
       <Categories />
 
+      {/* Best Seller Start */}
+
       <SectionHeader
         title="Best Sellers"
         description="Most Loved by Customers — A Must Have In a High Quality Kitchen"
       />
 
       <ProductSlider />
-
-      {/* Popular Items Section End */}
 
       {/* Promotion Section Start */}
       <section
@@ -60,9 +61,9 @@ function Home() {
               <p className="lead text-danger fw-bold mb-4">
                 Enjoy 20% OFF Today!
               </p>
-              <a href="#offers" className="btn btn-primary btn-lg">
-                SHOP NOW!
-              </a>
+              <Link to="/shop">
+                <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+              </Link>
             </div>
 
             {/* Right Image */}

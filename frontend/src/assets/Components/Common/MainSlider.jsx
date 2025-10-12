@@ -10,6 +10,7 @@ import CookerHood from "./../../Img/CookerHood.jpg";
 import WallDecor from "./../../Img/WallDecor.jpg";
 import PantryCupboard from "./../../Img/PantryCupboard.jpg";
 import Sink from "./../../Img/Sink.jpg";
+import { Link } from "react-router-dom";
 
 const MainSlider = () => {
   const BaseSliderStyle = {
@@ -57,7 +58,9 @@ const MainSlider = () => {
             <p style={{ textTransform: "capitalize" }}>
               Keep your kitchen fresh with our modern cooker hoods
             </p>
-            <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            <Link to="/shop">
+              <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide style={Slider2BackgroundStyle}>
@@ -67,7 +70,9 @@ const MainSlider = () => {
             <p style={{ textTransform: "capitalize" }}>
               Transform your kitchen walls with stylish panels and sheets
             </p>
-            <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            <Link to="/shop">
+              <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide style={Slider3BackgroundStyle}>
@@ -77,7 +82,9 @@ const MainSlider = () => {
             <p style={{ textTransform: "capitalize" }}>
               Elegant storage solutions for your perfect kitchen space
             </p>
-            <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            <Link to="/shop">
+              <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            </Link>
           </div>
         </SwiperSlide>
         <SwiperSlide style={Slider4BackgroundStyle}>
@@ -87,7 +94,9 @@ const MainSlider = () => {
             <p style={{ textTransform: "capitalize" }}>
               Premium sinks and faucets built for modern kitchens
             </p>
-            <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            <Link to="/shop">
+              <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+            </Link>
           </div>
         </SwiperSlide>
         ...
