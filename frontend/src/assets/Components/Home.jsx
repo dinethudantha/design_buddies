@@ -12,12 +12,6 @@ import ScrollTop from "./Common/ScrollUp";
 import Categories from "./Common/Categories";
 
 function Home() {
-  const CategoryBoxContainerStyle = {
-    display: "flex",
-    gap: "50px",
-    width: "auto",
-  };
-
 
   return (
     <>
@@ -40,45 +34,13 @@ function Home() {
 
       <Categories />
 
-      {/* <div className="container d-flex align-items-center justify-content-center mt-5">
-        <div style={CategoryBoxContainerStyle}>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox1Style}></div>
-              Cooker Hoods
-            </a>
-          </div>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox2Style}></div>
-              Wall Decor & Panels
-            </a>
-          </div>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox3Style}></div>
-              Pantry Cupboards
-            </a>
-          </div>
-          <div className="text-center CategoryBox">
-            <a href="#">
-              <div style={CategoryBox4Style}></div>
-              Sinks & Faucets
-            </a>
-          </div>
-        </div>
-      </div> */}
-      {/* Categories Section End */}
-      {/* Popular Items Section */}
+      {/* Best Sellers Section */}
 
-      {/* <div className="container pb-4 ">
-        <h2 className="mb-4">Best Sellers</h2>
-        
-      </div> */}
       <div className="container section-header text-center mt-5">
         <h1>Best Sellers</h1>
         <p>Most Loved by Customers — A Must Have In a High Quality Kitchen</p>
       </div>
+
       <ProductSlider /> 
 
       {/* Popular Items Section End */}
