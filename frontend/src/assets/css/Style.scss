@@ -20,16 +20,16 @@ $primary-color: #014139;
 .MainSlider {
   height: 600px;
   width: 100%;
-  
-  @media screen and (max-height:1199px) {
+
+  @media screen and (max-height: 1199px) {
     aspect-ratio: 16/8 !important;
   }
 
-  @media screen and (max-height:991px) {
+  @media screen and (max-height: 991px) {
     aspect-ratio: 4/3 !important;
   }
 
-  @media screen and (max-height:767px) {
+  @media screen and (max-height: 767px) {
     aspect-ratio: 1/1 !important;
   }
 }
@@ -51,6 +51,39 @@ $primary-color: #014139;
 .CategoryBox {
   &:hover {
     color: $primary-color;
+  }
+}
+
+.categories-section {
+  .category-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .circle-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    h5 {
+      color: #333;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
   }
 }
 

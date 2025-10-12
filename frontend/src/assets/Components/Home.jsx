@@ -2,16 +2,14 @@ import "../css/Style.scss";
 import React from "react";
 import Navigation from "./Common/Navigation";
 import MainSlider from "./Common/MainSlider";
-import Category1 from "./../Img/Category1.jpg";
-import Category2 from "./../Img/2150794171.jpg";
-import Category3 from "./../Img/17748.jpg";
-import Category4 from "./../Img/20011.jpg";
+
 import ProductSlider from "./Common/ProductSlider";
 import PromotionBanner from "./../Img/PromotionBanner.webp";
 import Footer from "./Common/Footer";
 import Promotion1 from "./../Img/Promotion1.jpg";
 import Blog from "./Common/Blog";
 import ScrollTop from "./Common/ScrollUp";
+import Categories from "./Common/Categories";
 
 function Home() {
   const CategoryBoxContainerStyle = {
@@ -20,34 +18,6 @@ function Home() {
     width: "auto",
   };
 
-  const CategoryBoxStyle = {
-    width: "170px",
-    aspectRatio: "1/1",
-    borderRadius: "50%",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  };
-
-  const CategoryBox1Style = {
-    ...CategoryBoxStyle,
-    backgroundImage: `url(${Category1})`,
-  };
-
-  const CategoryBox2Style = {
-    ...CategoryBoxStyle,
-    backgroundImage: `url(${Category2})`,
-  };
-
-  const CategoryBox3Style = {
-    ...CategoryBoxStyle,
-    backgroundImage: `url(${Category3})`,
-  };
-
-  const CategoryBox4Style = {
-    ...CategoryBoxStyle,
-    backgroundImage: `url(${Category4})`,
-  };
 
   return (
     <>
@@ -68,7 +38,9 @@ function Home() {
       </div>
       {/* Categories Section */}
 
-      <div className="container d-flex align-items-center justify-content-center mt-5">
+      <Categories />
+
+      {/* <div className="container d-flex align-items-center justify-content-center mt-5">
         <div style={CategoryBoxContainerStyle}>
           <div className="text-center CategoryBox">
             <a href="#">
@@ -95,7 +67,7 @@ function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Categories Section End */}
       {/* Popular Items Section */}
 
