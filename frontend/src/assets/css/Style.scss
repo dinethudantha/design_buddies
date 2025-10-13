@@ -181,6 +181,109 @@ $primary-color: #014139;
   }
 }
 
+// Features Section CSS
+.feature-section {
+  background: #fff;
+  border-top: 1px solid #eee;
+  
+  .feature-col {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .vertical-line {
+      position: absolute;
+      right: 0;
+      top: 20%;
+      bottom: 20%;
+      width: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  .feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    padding: 5px 10px;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .icon-box {
+      background: #f4f4f4;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: #111;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #eaeaea;
+      }
+    }
+
+    .content {
+      h5 {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #111;
+        margin-bottom: 6px;
+      }
+
+      p {
+        color: #555;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+      }
+
+      a {
+        color: #2563eb;
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        span {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          color: #1e40af;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .feature-col {
+      .vertical-line {
+        display: none;
+      }
+
+      .feature-card {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+
+        .content {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Features Section CSS End
+
 // Scroll Up Btn CSS
 
 .scroll-top {
@@ -207,3 +310,5 @@ $primary-color: #014139;
     transform: translateY(-3px);
   }
 }
+
+// Footer CSS

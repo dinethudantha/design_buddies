@@ -20,98 +20,98 @@ import {
 function Footer() {
   return (
     <>
-      <div className="bg-primary p-3 w-100 mt-5">
-        <div className="container d-flex align-items-center justify-content-between">
-          <span className="text-white text-bold">GET IN TOUCH:</span>
-          <div
-            className="d-flex justify-content-center align-items-center"
-            style={{
-              width: "100%",
-              maxWidth: "600px",
-            }}
-          >
-            <InputGroup>
-              <Form.Control
-                type="email"
-                placeholder="Enter your e-mail"
-                style={{
-                  border: "none",
-                  outline: "none",
-                  boxShadow: "none",
-                  backgroundColor: "#fff",
-                  borderTopLeftRadius: "6px",
-                  borderBottomLeftRadius: "6px",
-                  height: "40px",
-                  fontSize: "16px",
-                }}
-              />
-              <Button
-                variant="dark"
-                style={{
-                  borderTopRightRadius: "6px",
-                  borderBottomRightRadius: "6px",
-                  width: "120px",
-                  fontWeight: "500",
-                  border: "none",
-                  height: "40px",
-                }}
+      <footer className="footer">
+        <div className="bg-primary p-3 w-100 mt-5 ">
+          <div className="container d-flex align-items-center justify-content-between">
+            <span className="text-white text-bold">GET IN TOUCH:</span>
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{
+                width: "100%",
+                maxWidth: "600px",
+              }}
+            >
+              <InputGroup>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter your e-mail"
+                  style={{
+                    border: "none",
+                    outline: "none",
+                    boxShadow: "none",
+                    backgroundColor: "#fff",
+                    borderTopLeftRadius: "6px",
+                    borderBottomLeftRadius: "6px",
+                    height: "40px",
+                    fontSize: "16px",
+                  }}
+                />
+                <Button
+                  variant="dark"
+                  style={{
+                    borderTopRightRadius: "6px",
+                    borderBottomRightRadius: "6px",
+                    width: "120px",
+                    fontWeight: "500",
+                    border: "none",
+                    height: "40px",
+                  }}
+                >
+                  JOIN US
+                </Button>
+              </InputGroup>
+            </div>
+            <div className="social-icons d-flex align-items-center gap-2">
+              <a
+                href="https://facebook.com"
+                className="social-icon facebook text-white"
               >
-                JOIN US
-              </Button>
-            </InputGroup>
-          </div>
-          <div className="social-icons d-flex align-items-center gap-2">
-            <a
-              href="https://facebook.com"
-              className="social-icon facebook text-white"
-            >
-              <FontAwesomeIcon icon={faFacebookF} />
-            </a>
-            {/* Instagram */}
-            <a
-              href="https://instagram.com/yourpage"
-              className="social-icon instagram text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-            >
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              {/* Instagram */}
+              <a
+                href="https://instagram.com/yourpage"
+                className="social-icon instagram text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
 
-            {/* TikTok */}
-            <a
-              href="https://tiktok.com/@yourpage"
-              className="social-icon tiktok text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="TikTok"
-            >
-              <FontAwesomeIcon icon={faTiktok} />
-            </a>
+              {/* TikTok */}
+              <a
+                href="https://tiktok.com/@yourpage"
+                className="social-icon tiktok text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <FontAwesomeIcon icon={faTiktok} />
+              </a>
 
-            {/* Email */}
-            <a
-              href="mailto:info@yourdomain.com"
-              className="social-icon email text-white"
-              aria-label="Email"
-            >
-              <FontAwesomeIcon icon={faEnvelope} />
-            </a>
+              {/* Email */}
+              <a
+                href="mailto:info@yourdomain.com"
+                className="social-icon email text-white"
+                aria-label="Email"
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
 
-            {/* YouTube */}
-            <a
-              href="https://youtube.com/yourchannel"
-              className="social-icon youtube text-white"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="YouTube"
-            >
-              <FontAwesomeIcon icon={faYoutube} />
-            </a>
+              {/* YouTube */}
+              <a
+                href="https://youtube.com/yourchannel"
+                className="social-icon youtube text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <FontAwesomeIcon icon={faYoutube} />
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <footer>
         {/* Main footer area */}
         <div
           style={{ backgroundColor: "#f7f8fa" }}
@@ -252,8 +252,11 @@ function Footer() {
           style={{ backgroundColor: "#ffffff" }}
           className="text-center text-muted small py-3 border-top"
         >
-          © {new Date().getFullYear()} <a href="#" style={{textDecoration:"underline"}}>The Anzwer IT Solutions</a>.
-          All rights reserved.
+          © {new Date().getFullYear()}{" "}
+          <a href="#" style={{ textDecoration: "underline" }}>
+            The Anzwer IT Solutions
+          </a>
+          . All rights reserved.
         </div>
       </footer>
     </>
