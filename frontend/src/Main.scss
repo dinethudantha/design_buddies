@@ -10,7 +10,6 @@ $primary-color: #014139;
   font-family: $primary-font;
 }
 
-
 :root {
   --swiper-pagination-color: #014139; /* Active bullet color */
   --swiper-pagination-bullet-inactive-color: #999999; /* Inactive bullet color */
@@ -18,8 +17,11 @@ $primary-color: #014139;
   /* Other pagination related variables can also be customized */
 }
 
-html{
+html,body {
   overflow-y: scroll !important;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; // prevents horizontal scroll
 }
 
 a {
@@ -50,7 +52,7 @@ h1.slider-header {
 }
 
 .text-primary {
-    color: $primary-color !important;
+  color: $primary-color !important;
 }
 
 .line-clamp-3 {
@@ -60,6 +62,8 @@ h1.slider-header {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
 
 .btn-primary {
   background-color: $primary-color !important;
@@ -80,11 +84,10 @@ h1.slider-header {
   font-size: 14px;
   padding: 10px;
   border-radius: 0;
-  &:hover{
+  &:hover {
     color: white !important;
     background-color: black !important;
   }
-
 }
 
 .border-right {

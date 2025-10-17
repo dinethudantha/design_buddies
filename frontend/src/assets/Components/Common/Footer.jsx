@@ -16,7 +16,6 @@ import {
   faClock,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
-
 function Footer() {
   return (
     <>
@@ -259,6 +258,7 @@ function Footer() {
           . All rights reserved.
         </div>
       </footer>
+      
     </>
   );
 }

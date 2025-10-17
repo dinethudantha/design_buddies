@@ -4,7 +4,7 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 function BreadCrumb(props) {
   return (
     <>
-      <Breadcrumb>
+      <Breadcrumb className="d-flex align-items-center">
         <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
         <Breadcrumb.Item href="#/">
           {props.item1}

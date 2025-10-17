@@ -29,7 +29,7 @@ function Navigation() {
   }, [lastScroll]);
   return (
     <>
-      <div className="top-bar w-100 d-flex align-items-center justify-content-center">
+      <div className="top-bar w-100 d-flex align-items-center justify-content-center header">
         <span className="text-white text-center">
           ISLAND WIDE FREE DELIVERY ORDER ABOVE RS.15000/- PLANTS ONLY DELIVERED
           WITHIN COLOMBO & SUBURB
