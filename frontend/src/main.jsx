@@ -1,20 +1,34 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './assets/Components/Home.jsx';
-import './Main.scss'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./assets/Components/Home.jsx";
+import "./Main.scss";
 import "bootstrap-icons/font/bootstrap-icons.css";
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+import Shop from "./assets/Components/Shop.jsx";
+import CookerHoods from "./assets/Components/Categories/CookerHoods.jsx";
+import WallDecor from "./assets/Components/Categories/WallDecor.jsx";
+import PantryCupboards from "./assets/Components/Categories/PantryCupboards.jsx";
+import Sinks from "./assets/Components/Categories/Sinks.jsx";
+import "./assets/css/ProductPage.scss";
 
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>;
 
 const router = createBrowserRouter([
-  {path:'/',element:<Home />}
-])
+  { path: "/", element: <Home /> },
+  { path: "/shop", element: <Shop /> },
+  { path: "/shop/cookerhoods", element: <CookerHoods /> },
+  { path: "/shop/walldecor", element: <WallDecor /> },
+  { path: "/shop/pantrycupboards", element: <PantryCupboards /> },
+  { path: "/shop/sinks", element: <Sinks /> },
+]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}/>
-  </StrictMode>,
-)
+    <RouterProvider router={router} />
+  </StrictMode>
+);

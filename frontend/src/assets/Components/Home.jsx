@@ -8,31 +8,27 @@ import PromotionBanner from "./../Img/PromotionBanner.webp";
 import Footer from "./Common/Footer";
 import Promotion1 from "./../Img/Promotion1.jpg";
 import Blog from "./Common/Blog";
-import ScrollTop from "./Common/ScrollUp";
 import Categories from "./Common/Categories";
+import SectionHeader from "./Common/SectionHeader";
+import { Link } from "react-router-dom";
+import Layout from "../Layout";
 
 function Home() {
+  const CategoryBoxContainerStyle = {
+    display: "flex",
+    gap: "50px",
+    width: "auto",
+  };
 
   return (
     <>
-      <header className="shadow">
-        <div className="top-bar w-100 d-flex align-items-center justify-content-center">
-          <span className="text-white text-center">
-            ISLAND WIDE FREE DELIVERY ORDER ABOVE RS.15000/- PLANTS ONLY
-            DELIVERED WITHIN COLOMBO & SUBURB
-          </span>
-        </div>
-        <Navigation />
-      </header>
-      {/* Slider Here */}
-      <MainSlider />
-      <div className="container section-header text-center mt-5">
-        <h1>Welcome to Design Buddies!</h1>
-        <p>Complete Kitchen Solutions — Cooker Hoods, Cabinets & More</p>
-      </div>
-      {/* Categories Section */}
+      <Layout>
+        <MainSlider />
 
-      <Categories />
+        <SectionHeader
+          title="Welcome to Design Buddies!"
+          description="Complete Kitchen Solutions — Cooker Hoods, Cabinets & More"
+        />
 
       {/* Best Sellers Section */}
 
@@ -43,52 +39,55 @@ function Home() {
 
       <ProductSlider /> 
 
-      {/* Popular Items Section End */}
+        {/* Best Seller Start */}
 
-      {/* Promotion Section Start */}
-      <section
-        className="banner-section py-5 mt-5"
-        style={{ backgroundColor: "#f7f8fa" }}
-      >
-        <div className="container">
-          <div className="row align-items-center">
-            {/* Left Text */}
-            <div className="col-md-6 text-md-start text-center mb-4 mb-md-0">
-              <h2 className="fw-bold display-5 mb-2">Your Dream Kitchen</h2>
-              <h3 className="fw-semibold mb-3">Now In Reality</h3>
-              <p className="lead text-danger fw-bold mb-4">
-                Enjoy 20% OFF Today!
-              </p>
-              <a href="#offers" className="btn btn-primary btn-lg">
-                SHOP NOW!
-              </a>
-            </div>
+        <SectionHeader
+          title="Best Sellers"
+          description="Most Loved by Customers — A Must Have In a High Quality Kitchen"
+        />
 
-            {/* Right Image */}
-            <div className="col-md-6 text-center">
-              <img
-                src={Promotion1} // your uploaded image
-                alt="Dream Kitchen"
-                className="img-fluid rounded shadow-sm"
-                style={{ maxHeight: "400px", objectFit: "cover" }}
-              />
+        <ProductSlider />
+
+        {/* Promotion Section Start */}
+        <section
+          className="banner-section py-5 mt-5"
+          style={{ backgroundColor: "#f7f8fa" }}
+        >
+          <div className="container">
+            <div className="row align-items-center">
+              {/* Left Text */}
+              <div className="col-md-6 text-md-start text-center mb-4 mb-md-0">
+                <h2 className="fw-bold display-5 mb-2">Your Dream Kitchen</h2>
+                <h3 className="fw-semibold mb-3">Now In Reality</h3>
+                <p className="lead text-danger fw-bold mb-4">
+                  Enjoy 20% OFF Today!
+                </p>
+                <Link to="/shop">
+                  <button className="btn btn-primary btn-lg">SHOP NOW!</button>
+                </Link>
+              </div>
+
+              {/* Right Image */}
+              <div className="col-md-6 text-center">
+                <img
+                  src={Promotion1} // your uploaded image
+                  alt="Dream Kitchen"
+                  className="img-fluid rounded shadow-sm"
+                  style={{ maxHeight: "400px", objectFit: "cover" }}
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Bottom white row */}
-        <div className="bottom-bar mt-5"></div>
-      </section>
-      <div className="py-4"></div>
-      {/* Promotion Section End */}
-      {/* Blog Section Start */}
-      <Blog />
-      {/* Blog Section End */}
-      {/* Footer Start */}
-      <Footer />
+          {/* Bottom white row */}
+          <div className="bottom-bar mt-5"></div>
+        </section>
 
-      <ScrollTop />
-      {/* Footer End */}
+        {/* Promotion Section End */}
+        {/* Blog Section Start */}
+        <Blog />
+        {/* Blog Section End */}
+      </Layout>
     </>
   );
 }

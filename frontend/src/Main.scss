@@ -10,7 +10,6 @@ $primary-color: #014139;
   font-family: $primary-font;
 }
 
-
 :root {
   --swiper-pagination-color: #014139; /* Active bullet color */
   --swiper-pagination-bullet-inactive-color: #999999; /* Inactive bullet color */
@@ -18,8 +17,12 @@ $primary-color: #014139;
   /* Other pagination related variables can also be customized */
 }
 
-html{
+html,
+body {
   overflow-y: scroll !important;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; // prevents horizontal scroll
 }
 
 a {
@@ -50,7 +53,7 @@ h1.slider-header {
 }
 
 .text-primary {
-    color: $primary-color !important;
+  color: $primary-color !important;
 }
 
 .line-clamp-3 {
@@ -80,11 +83,42 @@ h1.slider-header {
   font-size: 14px;
   padding: 10px;
   border-radius: 0;
-  &:hover{
+  &:hover {
     color: white !important;
     background-color: black !important;
   }
+}
 
+.ShowMoreButton {
+  background: none !important;
+  border: 1px solid $primary-color !important;
+  color: $primary-color !important;
+  font-weight: bold !important;
+  width: 250px;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s ease;
+  }
+  &:hover {
+    background-color: $primary-color !important;
+    color: white !important;
+    span {
+      animation: movedownup 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes movedownup {
+  0%{
+    transform: translateY(0px);
+  }
+  10%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }
 
 .border-right {

@@ -1,5 +1,5 @@
 import React from "react";
-
+import SectionHeader from "./SectionHeader";
 
 function Blog() {
   const blogs = [
@@ -35,12 +35,10 @@ function Blog() {
     <>
       <section className="blog-section">
         <div className="container">
-          <div className="text-center mb-5">
-            <h1 className="fw-bold">Latest From Our Blog</h1>
-            <p className="text-muted">
-             Get Expert Tips, Creative Ideas, and Inspiration To Design Your Perfect Kitchen.
-            </p>
-          </div>
+          <SectionHeader
+            title="Latest From Our Blog"
+            description="Get Expert Tips, Creative Ideas, and Inspiration To Design Your Perfect Kitchen."
+          />
 
           <div className="row g-4">
             {blogs.map((blog) => (

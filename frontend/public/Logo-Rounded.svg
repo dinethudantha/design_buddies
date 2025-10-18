@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2000 2000">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-5 {
+        fill: pink;
+      }
+
+      .cls-6 {
+        fill: #014139;
+      }
+
+      .cls-7 {
+        fill: #fdbe00;
+      }
+
+      .cls-8 {
+        letter-spacing: .02em;
+      }
+
+      .cls-2 {
+        font-family: Lato-Regular, Lato;
+        font-size: 69.75px;
+      }
+
+      .cls-3 {
+        font-family: Lato-Bold, Lato;
+        font-size: 156.01px;
+        font-weight: 700;
+        letter-spacing: .02em;
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="768.22" y1="642.29" x2="1301.75" y2="1175.83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#faf99c"/>
+      <stop offset=".33" stop-color="#9d7127"/>
+      <stop offset=".67" stop-color="#faf99c"/>
+      <stop offset="1" stop-color="#9d7127"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <rect class="cls-6" x="0" y="0" width="2000" height="2000" rx="1000" ry="1000"/>
+  </g>
+  <g id="Layer_1" data-name="Layer 1">
+    <g id="Icon">
+      <path class="cls-9" d="m1214.17,775.37s-69.74-23.13-175,71.78v-379.75h-81.74v140.2c-37.72-1.64-295.42-3.67-311.43,244.91,0,0-16.09,138.73,97.19,199.89,3.31,1.78,6.58,3.63,9.81,5.54,15.77,9.3,86.25,39.86,204.42-66.49,25.11-22.6,52.39-51.4,81.74-87.89,5.31-6.6,10.68-13.43,16.12-20.54,0,0,100.07-119.58,170.99-36.42,9.5,11.14,16.67,24.06,21.49,37.89,14.68,42.2,41.95,158.5-53.33,264.76-2.46,2.74-4.91,5.5-7.35,8.26-10.05,11.33-53.55,53.7-147.92,61.56v-271.48c-27.7,32.04-55.03,59.13-81.74,81.01v211.88h25.14c37.72,0,75.42-1.54,113.01-4.61h0s206.08-9.79,252.71-194.57c0,0,51.23-215.87-134.13-265.95Zm-311.6,222.2c-32.97,24.66-82.84,46.87-126.18,3.85-12.73-12.64-22.06-28.28-27.55-45.36-13.09-40.69-34.02-140.04,31.61-234.31,29.5-42.38,72.66-73.55,122.61-86.65,16.51-4.33,34.84-7.02,54.37-6.5v309.62c-3.25,4.32-6.52,8.75-9.81,13.29-12.66,17.49-27.76,33.12-45.05,46.05Z"/>
+    </g>
+    <text id="Company_name" data-name="Company name" class="cls-3" transform="translate(164.05 1464.42)"><tspan x="0" y="0">Design Buddies Pvt Ltd</tspan></text>
+    <text id="Tagline" class="cls-2" transform="translate(651.37 1603.58)"><tspan class="cls-8" x="0" y="0">BUILD </tspan><tspan class="cls-4" x="227.68" y="0">Y</tspan><tspan class="cls-8" x="270.16" y="0">OUR DREAM</tspan></text>
+    <g>
+      <rect class="cls-1" x="175.44" y="1509.17" width="1646.86" height="14"/>
+      <g>
+        <rect class="cls-6" x="727.09" y="1511.15" width="541.78" height="10.03"/>
+        <rect class="cls-7" x="175.44" y="1511.06" width="551.65" height="10.22"/>
+        <rect class="cls-5" x="1268.87" y="1511.05" width="553.43" height="10.25"/>
+      </g>
+    </g>
+  </g>
+</svg>
