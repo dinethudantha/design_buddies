@@ -95,6 +95,7 @@ h1.slider-header {
   color: $primary-color !important;
   font-weight: bold !important;
   width: 250px;
+  overflow-y: hidden;
   span {
     display: inline-block;
     position: relative;
@@ -104,7 +105,7 @@ h1.slider-header {
     background-color: $primary-color !important;
     color: white !important;
     span {
-      animation: movedownup 0.3s ease-in-out;
+      animation: movedownup 0.2s ease-in-out;
     }
   }
 }
@@ -114,7 +115,7 @@ h1.slider-header {
     transform: translateY(0px);
   }
   10%{
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100%{
     transform: translateY(0px);
