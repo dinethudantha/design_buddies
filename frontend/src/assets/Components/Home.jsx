@@ -32,21 +32,12 @@ function Home() {
 
         <Categories />
 
-      {/* Best Sellers Section */}
+        {/* Best Sellers Section */}
 
-      <div className="container section-header text-center mt-5">
-        <h1>Best Sellers</h1>
-        <p>Most Loved by Customers — A Must Have In a High Quality Kitchen</p>
-      </div>
-
-      <ProductSlider /> 
-
-        {/* Best Seller Start */}
-
-        <SectionHeader
-          title="Best Sellers"
-          description="Most Loved by Customers — A Must Have In a High Quality Kitchen"
-        />
+        <div className="container section-header text-center mt-5">
+          <h1>Best Sellers</h1>
+          <p>Most Loved by Customers — A Must Have In a High Quality Kitchen</p>
+        </div>
 
         <ProductSlider />
 
