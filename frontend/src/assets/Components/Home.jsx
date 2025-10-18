@@ -30,9 +30,14 @@ function Home() {
           description="Complete Kitchen Solutions — Cooker Hoods, Cabinets & More"
         />
 
-        {/* Categories Section */}
+      {/* Best Sellers Section */}
 
-        <Categories />
+      <div className="container section-header text-center mt-5">
+        <h1>Best Sellers</h1>
+        <p>Most Loved by Customers — A Must Have In a High Quality Kitchen</p>
+      </div>
+
+      <ProductSlider /> 
 
         {/* Best Seller Start */}
 

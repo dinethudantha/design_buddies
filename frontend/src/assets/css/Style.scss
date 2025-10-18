@@ -48,12 +48,6 @@ $primary-color: #014139;
 
 // Category Section
 
-.CategoryBox {
-  &:hover {
-    color: $primary-color;
-  }
-}
-
 .categories-section {
   .category-card {
     cursor: pointer;
