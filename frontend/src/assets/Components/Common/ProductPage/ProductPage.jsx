@@ -6,7 +6,6 @@ import SectionHeader from "../SectionHeader";
 const ProductPage = () => {
   return (
     <>
-       
       <div className="product-page container-fluid py-4">
         <div className="row">
           {/* Sidebar Section */}
@@ -15,7 +14,7 @@ const ProductPage = () => {
           </div>
 
           {/* Product Cards Section */}
-          <div className="col-md-9">
+          <div className="col-md-9 d-flex flex-column align-items-center ">
             <div className="row g-4">
               {[...Array(8)].map((_, index) => (
                 <div className="col-md-4 col-sm-6" key={index}>
@@ -29,6 +28,9 @@ const ProductPage = () => {
                 </div>
               ))}
             </div>
+            <button className="btn btn-primary ShowMoreButton mt-3">
+              <span>Show More</span>
+            </button>
           </div>
         </div>
       </div>

@@ -17,7 +17,8 @@ $primary-color: #014139;
   /* Other pagination related variables can also be customized */
 }
 
-html,body {
+html,
+body {
   overflow-y: scroll !important;
   height: 100%;
   width: 100%;
@@ -63,8 +64,6 @@ h1.slider-header {
   text-overflow: ellipsis;
 }
 
-
-
 .btn-primary {
   background-color: $primary-color !important;
   color: white !important;
@@ -87,6 +86,38 @@ h1.slider-header {
   &:hover {
     color: white !important;
     background-color: black !important;
+  }
+}
+
+.ShowMoreButton {
+  background: none !important;
+  border: 1px solid $primary-color !important;
+  color: $primary-color !important;
+  font-weight: bold !important;
+  width: 250px;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.4s ease;
+  }
+  &:hover {
+    background-color: $primary-color !important;
+    color: white !important;
+    span {
+      animation: movedownup 0.3s ease-in-out;
+    }
+  }
+}
+
+@keyframes movedownup {
+  0%{
+    transform: translateY(0px);
+  }
+  10%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
   }
 }
 
