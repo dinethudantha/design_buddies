@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Categories;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -14,7 +15,7 @@ class CategoryController extends Controller
     {
         return response()->json([
             'success' => true,
-            'data' => 'Hello World!',
+            'data' => Categories::all()
         ]);
     }
 
