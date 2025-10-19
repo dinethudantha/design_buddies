@@ -12,7 +12,7 @@ import WallDecor from "./assets/Components/Categories/WallDecor.jsx";
 import PantryCupboards from "./assets/Components/Categories/PantryCupboards.jsx";
 import Sinks from "./assets/Components/Categories/Sinks.jsx";
 import "./assets/css/ProductPage.scss";
-import AdminRegisterForm from "./auth/AdminRegisterForm.jsx";
+import AdminRegisterForm from "./assets/Components/auth/AdminRegisterForm.jsx";
 
 <link
   rel="stylesheet"
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   { path: "/shop/walldecor", element: <WallDecor /> },
   { path: "/shop/pantrycupboards", element: <PantryCupboards /> },
   { path: "/shop/sinks", element: <Sinks /> },
-  { path:"/register",element:<AdminRegisterForm />}
+  { path:"/admin-register",element:<AdminRegisterForm />}
 ]);
 
 createRoot(document.getElementById("root")).render(
