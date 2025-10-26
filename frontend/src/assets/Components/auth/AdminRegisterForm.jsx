@@ -2,6 +2,8 @@ import { useState } from "react";
 import api, { getCsrfCookie } from "../../../services/api";
 import axios from "axios";
 import AuthLayout from "./AuthLayout";
+import { Link, useNavigate } from "react-router-dom";
+import AdminLoginForm from "./AdminLoginForm";
 function AdminRegisterForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,6 +18,8 @@ function AdminRegisterForm() {
       [e.target.name]: e.target.value,
     });
   };
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -35,8 +39,9 @@ function AdminRegisterForm() {
         { withCredentials: true }
       );
 
-      if (response.status === 201) {
+      if (response.status === 204 || response.status === 201) {
         console.log("User Created Successfully!!");
+        navigate("/login");
       }
     } catch (error) {
       if (error.response && error.response.status === 422) {
@@ -74,7 +79,7 @@ function AdminRegisterForm() {
               type="email"
               className="form-control rounded-3 py-2"
               name="email"
-              placeholder="your.email@example.com"
+              placeholder="example@gmail.com"
               onChange={handleChange}
             />
           </div>
@@ -118,7 +123,17 @@ function AdminRegisterForm() {
           >
             Create Account
           </button>
+
+
         </form>
+
+        {/* Footer */}
+        <div className="text-center mt-4">
+          <p className="text-muted mb-0">
+            Already have an account?{" "}
+            <Link to='/login'>Sign in</Link>
+          </p>
+        </div>
       </AuthLayout>
     </>
   );

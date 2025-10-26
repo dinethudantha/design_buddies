@@ -17,19 +17,7 @@ function AuthLayout({children , title , subTitle}) {
             {/* Form */}
             <main>{children}</main>
 
-            {/* Footer */}
-            <div className="text-center mt-4">
-              <p className="text-muted mb-0">
-                Already have an account?{" "}
-                <a
-                  href="#"
-                  className="fw-semibold text-decoration-none"
-                  style={{ color: "#764ba2" }}
-                >
-                  Sign in
-                </a>
-              </p>
-            </div>
+            
           </div>
         </div>
       </div>

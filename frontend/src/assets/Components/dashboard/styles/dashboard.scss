@@ -1,0 +1,123 @@
+:root {
+  --primary: rgb(3, 140, 102);
+  --muted: #f5f7fb;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f3f6f9;
+}
+
+.topbar {
+  height: 64px;
+  background: linear-gradient(
+    90deg,
+    rgba(52, 143, 255, 0.95),
+    rgba(54, 190, 255, 0.9)
+  );
+  color: #fff;
+
+  .brand {
+    font-weight: 600;
+  }
+
+  .logo-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+}
+
+.sidebar {
+  width: 240px;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: calc(100vh - 64px);
+
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  li.active a {
+    font-weight: 700;
+    color: var(--primary);
+  }
+}
+
+.content {
+  min-height: calc(100vh - 64px);
+}
+
+.status-card {
+  border-left: 6px solid transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+.status-card:nth-child(1) {
+  border-left-color: rgba(3, 140, 102, 0.9);
+}
+.status-card:nth-child(2) {
+  border-left-color: rgba(15, 183, 156, 0.9);
+}
+.status-card:nth-child(3) {
+  border-left-color: rgba(255, 193, 7, 0.9);
+}
+.status-card:nth-child(4) {
+  border-left-color: rgba(255, 92, 143, 0.9);
+}
+
+.map-card {
+  .map-placeholder {
+    height: 320px;
+    background: linear-gradient(180deg, #fff, #f8fafc);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #99a1aa;
+  }
+}
+.earnings-card {
+  .chart-placeholder {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 20px);
+    border-radius: 6px;
+  }
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(16, 24, 40, 0.04);
+}
+
+/* responsive tweaks */
+@media (max-width: 991px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* end of file */

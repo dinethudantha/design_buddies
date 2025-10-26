@@ -14,11 +14,7 @@ import Sinks from "./assets/Components/Categories/Sinks.jsx";
 import "./assets/css/ProductPage.scss";
 import AdminRegisterForm from "./assets/Components/auth/AdminRegisterForm.jsx";
 import AdminLoginForm from "./assets/Components/auth/AdminLoginForm.jsx";
-
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>;
+import AdminPanel from "./assets/Components/dashboard/AdminPanel.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -29,6 +25,8 @@ const router = createBrowserRouter([
   { path: "/shop/sinks", element: <Sinks /> },
   { path:"/register",element:<AdminRegisterForm />},
   { path:"/login",element:<AdminLoginForm />},
+  { path:"/dashboard",element:<AdminPanel />},
+
 ]);
 
 createRoot(document.getElementById("root")).render(
