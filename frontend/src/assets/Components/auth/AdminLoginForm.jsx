@@ -25,7 +25,6 @@ function AdminLoginForm() {
             await getCsrfCookie();
 
             const response = await api.post("/login", formData, { withCredentials: true });
-
             if (response.status === 204 || response.status === 201) {
                 console.log("Login Successful!");
                 navigate("/dashboard");

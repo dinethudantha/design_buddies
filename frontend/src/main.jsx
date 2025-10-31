@@ -14,7 +14,9 @@ import Sinks from "./assets/Components/Categories/Sinks.jsx";
 import "./assets/css/ProductPage.scss";
 import AdminRegisterForm from "./assets/Components/auth/AdminRegisterForm.jsx";
 import AdminLoginForm from "./assets/Components/auth/AdminLoginForm.jsx";
-import AdminPanel from "./assets/Components/dashboard/AdminPanel.jsx";
+import ProtectedRoute from "./assets/Components/auth/ProtectedRoute.jsx";
+import Dashboard from "./assets/Components/dashboard/pages/Dashboard.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -23,9 +25,9 @@ const router = createBrowserRouter([
   { path: "/shop/walldecor", element: <WallDecor /> },
   { path: "/shop/pantrycupboards", element: <PantryCupboards /> },
   { path: "/shop/sinks", element: <Sinks /> },
-  { path:"/register",element:<AdminRegisterForm />},
-  { path:"/login",element:<AdminLoginForm />},
-  { path:"/dashboard",element:<AdminPanel />},
+  { path: "/register", element: <AdminRegisterForm /> },
+  { path: "/login", element: <AdminLoginForm /> },
+  { path: "/dashboard", element: <ProtectedRoute><Dashboard /></ProtectedRoute> },
 
 ]);
 

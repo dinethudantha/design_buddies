@@ -10,12 +10,12 @@ const SidebarFilter = () => {
 
       <hr />
       <h5 className="fw-semibold mb-3">Category</h5>
-      {["Bag", "Bikini", "Dress", "Jeans", "Sneakers", "Top"].map((cat) => (
+      {["Cooker Hoods", "Wall Decor & Panels", "Pantry Cupboards", "Sinks & Faucets"].map((cat) => (
         <Form.Check key={cat} label={cat} />
       ))}
 
       <hr />
-      <h5 className="fw-semibold mb-3">Size</h5>
+      {/* <h5 className="fw-semibold mb-3">Size</h5>
       {["XS", "S", "M", "L", "XL", "2XL"].map((size) => (
         <Button
           key={size}
@@ -25,7 +25,7 @@ const SidebarFilter = () => {
         >
           {size}
         </Button>
-      ))}
+      ))} */}
 
       <hr />
       <h5 className="fw-semibold mb-3">Price</h5>

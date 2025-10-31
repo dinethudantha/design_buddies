@@ -1,5 +1,6 @@
 /* src/pages/Dashboard.jsx */
 import React from "react";
+import "./../styles/Dashboard.scss";
 
 export default function Dashboard(){
   return (
