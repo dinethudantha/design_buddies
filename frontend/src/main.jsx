@@ -16,6 +16,7 @@ import AdminRegisterForm from "./assets/Components/auth/AdminRegisterForm.jsx";
 import AdminLoginForm from "./assets/Components/auth/AdminLoginForm.jsx";
 import ProtectedRoute from "./assets/Components/auth/ProtectedRoute.jsx";
 import Dashboard from "./assets/Components/dashboard/pages/Dashboard.jsx";
+import CreateUser from "./assets/Components/dashboard/pages/CreateUser.jsx";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
   { path: "/register", element: <AdminRegisterForm /> },
   { path: "/login", element: <AdminLoginForm /> },
   { path: "/dashboard", element: <ProtectedRoute><Dashboard /></ProtectedRoute> },
+  {path:"/create-user", element:<ProtectedRoute><CreateUser /></ProtectedRoute>}
 
 ]);
 
