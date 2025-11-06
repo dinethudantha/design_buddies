@@ -20,7 +20,7 @@
     top: 0;
     left: 250px;
     right: 0;
-    z-index: 1000;
+    z-index: 500;
     .avatar {
       width: 36px;
       height: 36px;
@@ -46,6 +46,7 @@
   left: 0;
   top: 0;
   background-color: #fff !important;
+  z-index: 1000;
 
   .nav-items {
     height: calc(100vh - 64px);

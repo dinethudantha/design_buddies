@@ -14,17 +14,12 @@ function SideBar() {
                 <div className="nav-items">
                     <Accordion defaultActiveKey="0" >
                         <div className="label">Main Home</div>
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header className="nav-item"><i class="ri-dashboard-line"></i> Dashboard </Accordion.Header>
-                            <Accordion.Body>
-                                <Nav className="flex-column">
-                                    <Nav.Link href="#link1">Sub-item 1.1</Nav.Link>
-                                </Nav>
-                            </Accordion.Body>
-                        </Accordion.Item>
+                        <Nav className="flex-column">
+                            <Link to="/dashboard" className="nav-link"><i className="ri-dashboard-line"></i> Dashboard </Link>
+                        </Nav>
                         <div className="label">All Page</div>
                         <Accordion.Item eventKey="1">
-                            <Accordion.Header className="nav-item"><i class="ri-shopping-cart-line"></i> Ecommerce </Accordion.Header>
+                            <Accordion.Header className="nav-item"><i className="ri-shopping-cart-line"></i> Ecommerce </Accordion.Header>
                             <Accordion.Body>
                                 <Nav className="flex-column">
                                     <Nav.Link href="#link1">Add Product</Nav.Link>
@@ -33,7 +28,7 @@ function SideBar() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
-                            <Accordion.Header className="nav-item"><i class="ri-stack-line"></i> Category </Accordion.Header>
+                            <Accordion.Header className="nav-item"><i className="ri-stack-line"></i> Category </Accordion.Header>
                             <Accordion.Body>
                                 <Nav className="flex-column">
                                     <Nav.Link href="#link1">Category List</Nav.Link>
@@ -42,7 +37,7 @@ function SideBar() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="3">
-                            <Accordion.Header className="nav-item"><i class="ri-box-3-line"></i> Attributes </Accordion.Header>
+                            <Accordion.Header className="nav-item"><i className="ri-box-3-line"></i> Attributes </Accordion.Header>
                             <Accordion.Body>
                                 <Nav className="flex-column">
                                     <Nav.Link href="#link1">Attributes</Nav.Link>
@@ -51,7 +46,7 @@ function SideBar() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="4">
-                            <Accordion.Header className="nav-item"><i class="ri-file-add-line"></i> Order</Accordion.Header>
+                            <Accordion.Header className="nav-item"><i className="ri-file-add-line"></i> Order</Accordion.Header>
                             <Accordion.Body>
                                 <Nav className="flex-column">
                                     <Nav.Link href="#link1">Order List</Nav.Link>
@@ -61,18 +56,18 @@ function SideBar() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="5">
-                            <Accordion.Header className="nav-item"><i class="ri-user-line"></i> User</Accordion.Header>
+                            <Accordion.Header className="nav-item"><i className="ri-user-line"></i> User</Accordion.Header>
                             <Accordion.Body>
                                 <Nav className="flex-column">
                                     <Nav.Link href="#link1">All User</Nav.Link>
-                                    <Nav.Link><Link to="/create-user">Add New User</Link></Nav.Link>
+                                    <Link className="nav-link" to="/create-user">Add New User</Link>
                                     <Nav.Link href="#link1">Login</Nav.Link>
                                     <Nav.Link href="#link1">Signup</Nav.Link>
                                 </Nav>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="6">
-                            <Accordion.Header className="nav-item"><i class="ri-user-add-line"></i> Roles</Accordion.Header>
+                            <Accordion.Header className="nav-item"><i className="ri-user-add-line"></i> Roles</Accordion.Header>
                             <Accordion.Body>
                                 <Nav className="flex-column">
                                     <Nav.Link href="#link1">All Roles</Nav.Link>
@@ -81,24 +76,24 @@ function SideBar() {
                             </Accordion.Body>
                         </Accordion.Item>
                         <Nav className="flex-column">
-                            <Nav.Link href="#link1"><i class="ri-image-2-line"></i> Gallery</Nav.Link>
-                            <Nav.Link href="#link1"><i class="ri-pie-chart-line"></i> Report</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-image-2-line"></i> Gallery</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-pie-chart-line"></i> Report</Nav.Link>
                         </Nav>
                         <div className="label">Setting</div>
                         <Nav className="flex-column">
-                            <Nav.Link href="#link1"><i class="ri-map-pin-line"></i> Location</Nav.Link>
-                            <Nav.Link href="#link1"><i class="ri-settings-2-line"></i> Setting</Nav.Link>
-                            <Nav.Link href="#link1"><i class="ri-edit-box-line"></i> Pages</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-map-pin-line"></i> Location</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-settings-2-line"></i> Setting</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-edit-box-line"></i> Pages</Nav.Link>
                         </Nav>
                         <div className="label">Components</div>
                         <Nav className="flex-column">
-                            <Nav.Link href="#link1"><i class="ri-database-2-line"></i> Components</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-database-2-line"></i> Components</Nav.Link>
                         </Nav>
                         <div className="label">Support</div>
                         <Nav className="flex-column">
-                            <Nav.Link href="#link1"><i class="ri-question-line"></i> Help Center</Nav.Link>
-                            <Nav.Link href="#link1"><i class="ri-customer-service-line"></i> FAQs</Nav.Link>
-                            <Nav.Link href="#link1"><i class="ri-file-search-line"></i> Privacy Policy</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-question-line"></i> Help Center</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-customer-service-line"></i> FAQs</Nav.Link>
+                            <Nav.Link href="#link1"><i className="ri-file-search-line"></i> Privacy Policy</Nav.Link>
                         </Nav>
                     </Accordion>
 

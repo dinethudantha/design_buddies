@@ -1,14 +1,15 @@
 /* src/pages/Dashboard.jsx */
-import React from "react";
+import React, { useEffect } from "react";
 import "./../styles/Dashboard.scss";
-import SideBar from "../../Common/SideBar";
 import AdminPanelLayout from "../../../AdminPanelLayout";
 
 
 export default function Dashboard() {
+
   return (
     <>
       <AdminPanelLayout>
+       
         <div className="row g-3">
           <div className="col-md-3">
             <div className="card status-card p-3">

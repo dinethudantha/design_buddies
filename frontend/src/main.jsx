@@ -12,12 +12,13 @@ import WallDecor from "./assets/Components/Categories/WallDecor.jsx";
 import PantryCupboards from "./assets/Components/Categories/PantryCupboards.jsx";
 import Sinks from "./assets/Components/Categories/Sinks.jsx";
 import "./assets/css/ProductPage.scss";
-import AdminRegisterForm from "./assets/Components/auth/AdminRegisterForm.jsx";
 import AdminLoginForm from "./assets/Components/auth/AdminLoginForm.jsx";
 import ProtectedRoute from "./assets/Components/auth/ProtectedRoute.jsx";
 import Dashboard from "./assets/Components/dashboard/pages/Dashboard.jsx";
 import CreateUser from "./assets/Components/dashboard/pages/CreateUser.jsx";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import SignOut from "./assets/Components/auth/SignOut.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -26,15 +27,28 @@ const router = createBrowserRouter([
   { path: "/shop/walldecor", element: <WallDecor /> },
   { path: "/shop/pantrycupboards", element: <PantryCupboards /> },
   { path: "/shop/sinks", element: <Sinks /> },
-  { path: "/register", element: <AdminRegisterForm /> },
+  { path: "/register", element: <ProtectedRoute><CreateUser /></ProtectedRoute>},
   { path: "/login", element: <AdminLoginForm /> },
   { path: "/dashboard", element: <ProtectedRoute><Dashboard /></ProtectedRoute> },
-  {path:"/create-user", element:<ProtectedRoute><CreateUser /></ProtectedRoute>}
+  { path: "/create-user", element: <ProtectedRoute><CreateUser /></ProtectedRoute> },
+  { path: "/signout", element: <ProtectedRoute><SignOut /></ProtectedRoute> }
 
 ]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+    />
+
     <RouterProvider router={router} />
   </StrictMode>
 );

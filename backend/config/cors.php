@@ -5,7 +5,7 @@ return [
     /* ... (comments omitted) ... */
 
     // Fix: This should allow all paths for the API endpoints
-    'paths' => ['api/*', 'sanctum/csrf-cookie','register','login'],'logout',
+    'paths' => ['api/*', 'sanctum/csrf-cookie','register','login','logout'],
 
     // Fix: This must be a list of HTTP methods, NOT a URL
     'allowed_methods' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],

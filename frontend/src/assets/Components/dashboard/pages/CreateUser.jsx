@@ -4,8 +4,12 @@ import { Container, Row, Col, Form, Button, Card, Breadcrumb } from "react-boots
 import { EyeFill, EyeSlashFill } from "react-bootstrap-icons";
 import axios from 'axios';
 import api, { getCsrfCookie } from '../../../../services/api';
+import { useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 function CreateUser() {
+
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -30,35 +34,52 @@ function CreateUser() {
         e.preventDefault();
 
         try {
-            // CSRF cookie for Sanctum
-            // await axios.get("http://127.0.0.1:8000/sanctum/csrf-cookie", {
-            //   withCredentials: true,
-            // });
+
+            getCsrfCookie();
 
             await axios.get("http://localhost:8000/sanctum/csrf-cookie", {
                 withCredentials: true
             });
 
             // Register user
-            await axios.post("http://localhost:8000/register", formData, {
+            const response = await axios.post("http://localhost:8000/register", formData, {
                 withCredentials: true
             })
 
-            if (response.status === 204 || response.status === 201) {
-                console.log("User Created Successfully!!");
-                navigate("/login");
+            if (response.status === 201 || response.status === 204) {
+                toast.success(response.data.message || "User created successfully!");
+
+                // Reset form if needed
+                setFormData({
+                    name: "",
+                    email: "",
+                    phoneNumber: "",
+                    dateOfBirth: "",
+                    address: "",
+                    password: "",
+                    password_confirmation: "",
+                });
+
+
+                
             }
         } catch (error) {
             if (error.response && error.response.status === 422) {
-                console.error("Validation Errors:", error.response.data.errors);
+                // Validation errors
+                const errors = error.response.data.errors;
+                Object.values(errors).forEach(errArr => {
+                    errArr.forEach(msg => toast.error(msg));
+                });
             } else {
-                console.error("Registration failed:", error);
+                toast.error(error.response?.data?.message || "Registration failed!");
             }
         }
     }
 
     return (
         <AdminPanelLayout>
+
+            
 
             <Row>
                 <Col className='d-flex w-100 align-items-center justify-content-between'>
@@ -87,6 +108,7 @@ function CreateUser() {
                                     <Form.Control
                                         type="text"
                                         name="name"
+                                        value={formData.name}
                                         onChange={handleChange}
                                         placeholder="Username"
                                     />
@@ -97,6 +119,7 @@ function CreateUser() {
                                     <Form.Control
                                         type="email"
                                         name="email"
+                                        value={formData.email}
                                         onChange={handleChange}
                                         placeholder="Email"
                                     />
@@ -106,24 +129,28 @@ function CreateUser() {
                                     <Form.Control
                                         type="text"
                                         name="phoneNumber"
+                                        value={formData.phoneNumber}
                                         onChange={handleChange}
                                         placeholder="+94 77 XXX XXXX"
                                     />
                                 </Form.Group>
-                                <Form.Group controlId="formPhoneNumber" className="mb-3 col-6">
+                                <Form.Group controlId="formDateOfBirth" className="mb-3 col-6">
                                     <Form.Label>Date of Birth</Form.Label>
                                     <Form.Control
                                         type="date"
-                                        name="datePfBirth"
+                                        name="dateOfBirth"
+                                        value={formData.dateOfBirth}
                                         onChange={handleChange}
+                                        max={new Date().toISOString().split('T')[0]}
                                         placeholder="Date of Birth"
                                     />
                                 </Form.Group>
-                                <Form.Group controlId="address" className="mb-3 col-12">
+                                <Form.Group controlId="formAddress" className="mb-3 col-12">
                                     <Form.Label>Address</Form.Label>
                                     <Form.Control
                                         type="text"
                                         name="address"
+                                        value={formData.address}
                                         onChange={handleChange}
                                         placeholder="Home Address"
                                     />
@@ -136,6 +163,7 @@ function CreateUser() {
                                         <Form.Control
                                             type="password"
                                             name="password"
+                                            value={formData.password}
                                             onChange={handleChange}
                                             placeholder="Enter password"
                                         />
@@ -155,6 +183,7 @@ function CreateUser() {
                                         <Form.Control
                                             type="password"
                                             name="confirmPassword"
+                                            value={formData.password_confirmation}
                                             onChange={handleChange}
                                             placeholder="Confirm password"
                                         />

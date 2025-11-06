@@ -13,35 +13,48 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
-    /**
-     * Handle an incoming registration request.
-     *
-     * @throws \Illuminate\Validation\ValidationException
-     */
-    public function store(Request $request): Response
+    public function store(Request $request)
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'phoneNumber' => ['required', 'string', 'max:20' , 'phone'],
-            'dateOfBirth' => ['required', 'date', 'before:today'],
-        ]);
+        try {
+            $validated = $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:8'], // Remove 'confirmed' if no confirmation field
+                'phoneNumber' => ['required', 'string', 'max:20'],
+                'dateOfBirth' => ['required', 'date', 'before:today','after:1900-01-01'],
+                'address' => ['nullable', 'string', 'max:255'],
+            ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->string('password')),
-            'phone_number' => $request->phoneNumber,
-            'date_of_birth' => $request->dateOfBirth,
-            'address' => $request->address,
-            'is_active' => true,
-        ]);
+            $user = User::create([
+                'name' => $validated['name'],
+                'email' => $validated['email'],
+                'password' => Hash::make($validated['password']),
+                'phone_number' => $validated['phoneNumber'],
+                'date_of_birth' => $validated['dateOfBirth'],
+                'address' => $validated['address'] ?? null,
+                'is_active' => true,
+            ]);
 
-        event(new Registered($user));
+            event(new Registered($user));
 
-        Auth::login($user);
-
-        return response()->noContent();
+            return response()->json([
+                'success' => true,
+                'message' => 'User registered successfully',
+                'user' => $user
+            ], 201);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Validation failed',
+                'errors' => $e->errors()
+            ], 422);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Registration failed',
+                'error' => $e->getMessage()
+            ], 500);
+        }
     }
 }
+ 

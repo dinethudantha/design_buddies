@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import AuthLayout from "./AuthLayout";
 import api, { getCsrfCookie } from '../../../services/api';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
+
 function AdminLoginForm() {
 
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState({
         email: "",
@@ -26,14 +28,15 @@ function AdminLoginForm() {
 
             const response = await api.post("/login", formData, { withCredentials: true });
             if (response.status === 204 || response.status === 201) {
-                console.log("Login Successful!");
                 navigate("/dashboard");
+                toast.success("Login Successful!");    
             };
         } catch (error) {
             if (error.response && error.response.status === 422) {
-                console.error("Validation Errors:", error.response.data.errors);
+
+                toast.error("Validation errors occurred. Please check your input.", error.response.data.errors);
             } else {
-                console.error("Login failed:", error);
+                toast.error("Login failed. Please try again.", error);
             }
         };
     };

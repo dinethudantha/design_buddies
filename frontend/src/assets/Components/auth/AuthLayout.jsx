@@ -1,9 +1,9 @@
 import React from 'react'
 
-function AuthLayout({children , title , subTitle}) {
+function AuthLayout({ children, title, subTitle }) {
   return (
     <>
-        <div className="container p-5 d-flex align-items-center justify-content-center">
+      <div className="container p-5 d-flex align-items-center justify-content-center">
         <div className="col-lg-8 col-12">
           <div className="bg-white rounded-4 shadow-lg p-4 p-md-5">
             {/* Header */}
@@ -17,7 +17,7 @@ function AuthLayout({children , title , subTitle}) {
             {/* Form */}
             <main>{children}</main>
 
-            
+
           </div>
         </div>
       </div>
